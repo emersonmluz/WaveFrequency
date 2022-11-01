@@ -11,8 +11,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var slideFrequency: UISlider!
     @IBOutlet var viewSuper: UIView!
-    
-    var valueFrequency: Float = 0
+    @IBOutlet weak var numberFrequency: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +39,9 @@ class ViewController: UIViewController {
         default:
             print("Erro de frequência.")
         }
+        
+        numberFrequency.text = String(slideFrequency.value)
+        
     }
     
 }
